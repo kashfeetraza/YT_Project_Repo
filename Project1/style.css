@@ -1,0 +1,28 @@
+#yellow{
+    background: yellow;
+}
+#green{
+    background-color: green;
+}
+#blue{
+    background-color: blue;
+}
+#red{
+    background-color: red;
+}
+#black{
+    background-color: black;
+}
+.button{
+    width: 120px;
+    height: 120px;
+    border: 2px solid black;
+    padding: auto;
+    margin: 5px;
+}
+
+.colorcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
