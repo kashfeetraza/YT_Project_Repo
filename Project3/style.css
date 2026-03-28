@@ -1,0 +1,10 @@
+body{
+    background: black;
+    color: wheat;
+}
+#clock{
+    background: rgb(202, 132, 19);
+    color: wheat;
+    width: 120px;
+    height: 50px;
+}
