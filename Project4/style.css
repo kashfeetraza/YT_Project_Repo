@@ -54,6 +54,18 @@ body{
     padding-top: 0px;
     /* align-items: center;
     justify-content: center; */
+
+      /* The visible part of the button */
+  display: block;
+  padding: 2px 2px;
+  border-radius: 12px;
+  font-size: 1rem;
+  /* background: hsl(345deg 100% 47%); The main button color */
+  color: white;
+  /* Start the front raised by 6px */
+  transform: translateY(-6px);
+  /* Smooth transition for the movement */
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 }
 .container1{
     display: flex;
@@ -62,6 +74,16 @@ body{
     align-items: center;
     column-gap: 10px;
     margin: 10px;
+    height: 120px;
+
+      /* Basic button styling */
+  /* background: hsl(338, 7%, 67%); Color of the "shadow" or side */
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px; /* Accessibility for keyboard focus */
+  margin: 2px;
 }
 
 .text2{
@@ -72,4 +94,18 @@ body{
     color:#f24028;
     background-color: #e3e337;
     text-align: center;
+}
+
+.container1:hover .text1 {
+  /* Lift the front slightly on hover */
+  transform: translateY(-8px);
+  /* Adjust transition on hover for a snappier feel */
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.container1:active .text1 {
+  /* Lower the front to simulate a press */
+  transform: translateY(-2px);
+  /* Short transition for the press action */
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1);
 }
