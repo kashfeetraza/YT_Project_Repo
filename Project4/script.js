@@ -1,5 +1,6 @@
 
-let MyNumberValue = (Math.floor(Math.random() * 10) + 1) * 10;
+let MyNumberValue = (Math.floor(Math.random() * 10) + 1) * 10
+
 const HeaderText = document.querySelector('.text');
 const PlayBtn = document.querySelector('.container1 .text1');
 
