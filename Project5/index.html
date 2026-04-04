@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop and change color</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h2>The Given Button can Change the Background color</h2>
+    </div>
+    <button id="start">Start</button>
+    <Button id="stop">Stop</Button>
+</body>
+<script>
+    
+ let randomColor = function(){
+        const hexa = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += hexa[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+        // console.log(randomColor())
+
+    let Intervelid;
+    
+    let StartChangingbg = function(){
+        if(!Intervelid){
+            Intervelid = setInterval(changebgcolor , 1000)
+        }
+
+        // function changebgcolor(){
+            // document.body.style.backgroundColor = randomColor();
+            // document.querySelector('heading h2').style.color = randomColor();
+        // }
+        function changebgcolor(){
+            // document.body.style.backgroundColor = randomColor();
+            document.querySelector('.heading h2').style.color = randomColor();
+        }
+    }
+
+    let StopChangingbg = function(){
+        clearInterval(Intervelid);
+        Intervelid = null;
+    }
+
+    document.querySelector('#start').addEventListener('click', StartChangingbg)
+    document.querySelector('#stop').addEventListener('click', StopChangingbg)
+
+</script>
+</html>
