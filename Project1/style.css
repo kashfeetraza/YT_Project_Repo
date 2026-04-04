@@ -16,7 +16,7 @@
 .button{
     width: 120px;
     height: 120px;
-    border: 2px solid black;
+    border: 5px solid rgb(250, 244, 244);
     padding: auto;
     margin: 5px;
 }
